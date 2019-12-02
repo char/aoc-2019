@@ -11,7 +11,7 @@ const OPCODES = {
 const fixInstructions = (instructions, noun = 12, verb = 2) => {
   const fixedInstructions = [...instructions];
 
-  // restore the gravity assist program (your puzzle input) to the "1202 program alarm" state it had just before the last computer caught fire
+  // restore the gravity assist program (your puzzle input) to the '1202 program alarm' state it had just before the last computer caught fire
   fixedInstructions[1] = noun;
   fixedInstructions[2] = verb;
 
@@ -47,8 +47,8 @@ const fixInstructions = (instructions, noun = 12, verb = 2) => {
   return fixedInstructions;
 };
 
-console.log("Fixed instructions:", fixInstructions(initialInstructions).join(','));
-console.log("========================================");
+console.log('Fixed instructions:', fixInstructions(initialInstructions).join(','));
+console.log('========================================');
 
 // part 2
 
@@ -58,9 +58,9 @@ const bruteforceParameters = () => {
       try {
         const test = fixInstructions(initialInstructions, i, j);
         if (test[0] === 19690720) {
-          console.log("Special opcode detected.");
-          console.log("Inputs:", i, j);
-          console.log("Output:", 100 * test[1] + test[2]);
+          console.log('Special opcode detected.');
+          console.log('Inputs:', i, j);
+          console.log('Output:', 100 * test[1] + test[2]);
         }
       } catch (e) { }
     }
